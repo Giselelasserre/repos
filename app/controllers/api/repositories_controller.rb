@@ -1,5 +1,4 @@
-class Api::RepositoriesController < Api::V1::BaseController
-
+class Api::RepositoriesController < Api::BaseController
   def index
   @repositories = Repository.all
   end
@@ -13,6 +12,5 @@ class Api::RepositoriesController < Api::V1::BaseController
     response = HTTParty.get(url)
     repositories = response.parsed_response["items"]
   end
-
 end
 

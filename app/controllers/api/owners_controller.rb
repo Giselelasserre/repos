@@ -1,5 +1,4 @@
-class Api::OwnersController < Api::V1::BaseController
-
+class Api::OwnersController < Api::BaseController
   def index
     @owners = Owner.all
   end
